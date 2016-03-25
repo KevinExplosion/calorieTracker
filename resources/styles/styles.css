@@ -10,8 +10,14 @@ body {
   font-size: 100px;
 }
 
-.jumbotron h1 {
-  font-size: 60px;
+.appleHeart {
+  width: 80px;
+  height: 90px;
+  margin-top: -3%;
+}
+
+.textAndHeart {
+  border-bottom: 2px solid #fff;
 }
 
 .selected {

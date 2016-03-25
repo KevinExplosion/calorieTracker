@@ -5,3 +5,9 @@
 </meal-display>
 <edit-meal-details [meal]="selectedMeal">
 </edit-meal-details>
+
+<select (change)="onChange($event.target.value)">
+  <option value="all">Show All</option>
+  <option value="healthy">Show Meals < 300 Calories</option>
+  <option value="notHealthy" selected="selected">Show Meals > 300 Calories</option>
+</select>
