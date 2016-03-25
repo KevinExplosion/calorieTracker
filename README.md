@@ -26,6 +26,10 @@ You will need the following things properly installed on your computer.
   * apm install atom-typescript
 * $ bower install bootstrap --save
 
+* OPTIONALLY: you can also run the following
+  * npm install typescript -g
+  * apm install atom-typescript
+
 ## Running / Development
 
 * `gulp build`
