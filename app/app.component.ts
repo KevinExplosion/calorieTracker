@@ -1,10 +1,10 @@
+///<reference path="../node_modules/angular2/typings/browser.d.ts"/>
+
 import { Component } from 'angular2/core';
 
 @Component({
   selector: 'my-app',
-  template: `
-    <h1>Calorie Track</h1>
-  `
+  templateUrl: 'app/app.component.html'
 })
 
 export class AppComponent {
