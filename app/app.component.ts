@@ -15,10 +15,14 @@ export class AppComponent {
   public meals: Meal[];
 
   constructor(){
-    this.meals = [];
+    this.meals = [
+      new Meal("Hamburger", "A hamburger and Fries", 500),
+      new Meal("Hotdog", "A hotdog and beans", 400)
+    ];
   }
 
   mealWasSelected(clickedMeal: Meal): void {
 
+    console.log(clickedMeal);
   }
 }
