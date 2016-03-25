@@ -1,6 +1,6 @@
 <br>
 <h3>Today's Meals</h3>
-  <meal-display *ngFor="#currentMeal of mealList | healthy:filterHealthy"
+  <meal-display *ngFor="#currentMeal of mealList | calorie:filterCalorie"
    (click)="mealClicked(currentMeal)"
    [class.selected]="currentMeal === selectedMeal"
    [meal] = "currentMeal">
@@ -8,10 +8,10 @@
 
 <div class="row">
   <div class="form-group col-sm-3">
-    <select class="form-control"(change)="onChange($event.target.value)">
+    <select class="form-control calories"(change)="onCalorie($event.target.value)">
       <option value="all" selected="selected">Show All</option>
-      <option value="healthy">Show Meals < 300 Calories</option>
-      <option value="notHealthy">Show Meals > 300 Calories</option>
+      <option value="low">Show Meals < 300 Calories</option>
+      <option value="high">Show Meals > 300 Calories</option>
     </select>
   </div>
 </div>
@@ -20,5 +20,5 @@
   </edit-meal-details>
 
   <hr>
-  
+
   <new-meal (onSubmitNewMeal)="createMeal($event)"></new-meal>

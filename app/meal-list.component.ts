@@ -3,13 +3,13 @@ import { MealComponent } from './meal.component';
 import { Meal } from './meal.model';
 import { EditMealDetailsComponent } from './edit-meal-details.component';
 import { NewMealComponent } from './new-meal.component';
-import { HealthyPipe } from './healthy.pipe';
+import { CaloriePipe } from './calorie.pipe';
 
 @Component({
     selector: 'meal-list',
     inputs: ['mealList'],
   outputs: ['onMealSelect'],
-  pipes: [HealthyPipe],
+  pipes: [CaloriePipe],
   directives: [MealComponent, EditMealDetailsComponent, NewMealComponent],
   templateUrl: 'app/meal-list.component.html'
 })
@@ -18,7 +18,7 @@ export class MealListComponent {
   public mealList: Meal[];
   public onMealSelect: EventEmitter<Meal>;
   public selectedMeal: Meal;
-  public filterHealthy: string = "healthy";
+  public filterCalorie: string = "all";
 
   constructor() {
     this.onMealSelect = new EventEmitter();
@@ -35,8 +35,8 @@ export class MealListComponent {
     );
   }
 
-  onChange(filterOption) {
-    this.filterHealthy = filterOption;
-    console.log(this.filterHealthy);
+  onCalorie(filterOption) {
+    this.filterCalorie = filterOption;
+    console.log(this.filterCalorie);
   }
 }
