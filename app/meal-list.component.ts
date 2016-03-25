@@ -9,7 +9,18 @@ import { NewMealComponent } from './new-meal.component';
     inputs: ['mealList'],
   outputs: ['onMealSelect'],
   directives: [MealComponent, EditMealDetailsComponent, NewMealComponent],
-  templateUrl: 'app/meal-list.component.html'
+  template: `
+  <br>
+    <meal-display *ngFor="#currentMeal of mealList"
+     (click)="mealClicked(currentMeal)"
+     [class.selected]="currentMeal === selectedMeal"
+     [meal] = "currentMeal">
+    </meal-display>
+    <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
+    </edit-meal-details>
+    <hr>
+    <new-meal (onSubmitNewMeal)="createKeg($event)"></new-meal>
+  `
 })
 
 export class MealListComponent {
