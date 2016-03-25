@@ -1,3 +1,8 @@
 <div class="container">
   <h1>Calorie Track</h1>
+
+  <meal-list
+    [mealList]="meals"
+    (onMealSelect)="mealWasSelected($event)">
+  </meal-list>
 </div>

@@ -1,16 +1,15 @@
 import { Component, EventEmitter } from 'angular2/core';
 import { MealComponent } from './meal.component';
 import { Meal } from './meal.model';
-// import { EditMealDetailsComponent } from './edit-meal-details.component';
-// import { NewMealComponent } from './new-meal.component';
-// the above imports are making atom mad because they haven't been created yet
+import { EditMealDetailsComponent } from './edit-meal-details.component';
+import { NewMealComponent } from './new-meal.component';
 
 @Component({
     selector: 'meal-list',
     inputs: ['mealList'],
   outputs: ['onMealSelect'],
   directives: [MealComponent, EditMealDetailsComponent, NewMealComponent],
-  templateUrl: 'meal-list.component.html'
+  templateUrl: 'app/meal-list.component.html'
 })
 
 export class MealListComponent {
