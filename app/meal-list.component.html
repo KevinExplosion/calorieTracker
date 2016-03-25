@@ -1,13 +1,20 @@
-<meal-display *ngFor="#currentMeal of mealList"
-  (click)="mealClicked(currentMeal)"
-  [class.selected]="currentMeal === selectedMeal"
-  [meal] = "currentMeal">
-</meal-display>
-<edit-meal-details [meal]="selectedMeal">
-</edit-meal-details>
+<br>
+<h3>Today's Meals</h3>
+  <meal-display *ngFor="#currentMeal of mealList | healthy:filterHealthy"
+   (click)="mealClicked(currentMeal)"
+   [class.selected]="currentMeal === selectedMeal"
+   [meal] = "currentMeal">
+  </meal-display>
 
-<select (change)="onChange($event.target.value)">
-  <option value="all">Show All</option>
+  <div class="form-group">
+  <select class="form-control"(change)="onChange($event.target.value)">
+  <option value="all" selected="selected">Show All</option>
   <option value="healthy">Show Meals < 300 Calories</option>
-  <option value="notHealthy" selected="selected">Show Meals > 300 Calories</option>
-</select>
+  <option value="notHealthy">Show Meals > 300 Calories</option>
+  </select>
+  </div>
+
+  <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
+  </edit-meal-details>
+  <hr>
+  <new-meal (onSubmitNewMeal)="createMeal($event)"></new-meal>

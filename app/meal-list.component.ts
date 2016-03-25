@@ -11,26 +11,7 @@ import { HealthyPipe } from './healthy.pipe';
   outputs: ['onMealSelect'],
   pipes: [HealthyPipe],
   directives: [MealComponent, EditMealDetailsComponent, NewMealComponent],
-  template: `
-  <br>
-    <meal-display *ngFor="#currentMeal of mealList | healthy:filterHealthy"
-     (click)="mealClicked(currentMeal)"
-     [class.selected]="currentMeal === selectedMeal"
-     [meal] = "currentMeal">
-    </meal-display>
-    <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
-    </edit-meal-details>
-    <hr>
-    <new-meal (onSubmitNewMeal)="createMeal($event)"></new-meal>
-
-    <div class="form-group">
-      <select class="form-control" (change)="onChange($event.target.value)">
-        <option value="all">Show All</option>
-        <option value="healthy">Show Meals < 300 Calories</option>
-        <option value="notHealthy" selected="selected">Show Meals > 300 Calories</option>
-      </select>
-    </div>
-  `
+  templateUrl: 'app/meal-list.component.html'
 })
 
 export class MealListComponent {

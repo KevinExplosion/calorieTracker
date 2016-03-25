@@ -15,10 +15,7 @@ export class AppComponent {
   public meals: Meal[];
 
   constructor(){
-    this.meals = [
-      new Meal("Hamburger", "A hamburger and Fries", 500),
-      new Meal("Hotdog", "A hotdog and beans", 400)
-    ];
+    this.meals = [];
   }
 
   mealWasSelected(clickedMeal: Meal): void {
