@@ -6,15 +6,19 @@
    [meal] = "currentMeal">
   </meal-display>
 
-  <div class="form-group">
-  <select class="form-control"(change)="onChange($event.target.value)">
-  <option value="all" selected="selected">Show All</option>
-  <option value="healthy">Show Meals < 300 Calories</option>
-  <option value="notHealthy">Show Meals > 300 Calories</option>
-  </select>
+<div class="row">
+  <div class="form-group col-sm-3">
+    <select class="form-control"(change)="onChange($event.target.value)">
+      <option value="all" selected="selected">Show All</option>
+      <option value="healthy">Show Meals < 300 Calories</option>
+      <option value="notHealthy">Show Meals > 300 Calories</option>
+    </select>
   </div>
+</div>
 
   <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
   </edit-meal-details>
+
   <hr>
+  
   <new-meal (onSubmitNewMeal)="createMeal($event)"></new-meal>

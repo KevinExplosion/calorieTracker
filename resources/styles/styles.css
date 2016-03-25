@@ -1,13 +1,34 @@
 body {
-  background-color: #3498db;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3498db+0,2989d8+28,7db4d8+82,e5e5e5+100 */
+  background: #3498db; /* Old browsers */
+  background: -moz-linear-gradient(top,  #3498db 0%, #2989d8 28%, #7db4d8 82%, #e5e5e5 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #3498db 0%,#2989d8 28%,#7db4d8 82%,#e5e5e5 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #3498db 0%,#2989d8 28%,#7db4d8 82%,#e5e5e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3498db', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+
+}
+
+.navbar {
+  background-color: rgba(44, 62, 80, 0.8);
+  height: 10px;
+  border-radius: 0;
+}
+
+.navbar img {
+  height: 35px;
+  width: 35px;
+  float: right;
+  margin-top: 10px;
+  padding: 1px;
+  padding-bottom: 5px;
 }
 
 .jumbotron {
   background-color: rgba(52, 73, 94, 0.2);
   border: 3px solid #fff;
-  margin-top: 5%;
   color: #fff;
   font-size: 100px;
+  margin-top: -20px;
 }
 
 .appleHeart {
@@ -21,5 +42,5 @@ body {
 }
 
 .selected {
-  color: #bdc3c7
+  color: #bdc3c7;
 }

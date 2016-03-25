@@ -1,18 +1,30 @@
+<div class="navbar">
+<a href="https://github.com/KevinExplosion">
+  <img src="resources/images/github.png" alt="gitHub logo">
+</a>
+<a href="https://github.com/KevinExplosion/calorieTracker">
+  <img src="resources/images/tabIcon.png" alt="heart apple logo">
+</a>
+<a href="https://www.linkedin.com/in/kevin-mattison-57877266">
+  <img src="resources/images/linkedin.png" alt="linkedIn logo">
+</a>
+</div>
+
 <div class="container">
-  <div class="jumbotron">
-    <div class="row">
-      <div class="col-md-3">
-        <img src="resources/images/runner.png" alt="runner" class="logo">
-      </div>
-      <div class="col-md-9 textAndHeart">
-        Calorie Track
-        <img src="resources/images/tabIcon.png" alt="apple heart" class="appleHeart">
-      </div>
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="resources/images/runner.png" alt="runner" class="logo">
+    </div>
+    <div class="col-md-9 textAndHeart">
+      Calorie Track
+      <img src="resources/images/tabIcon.png" alt="apple heart" class="appleHeart">
     </div>
   </div>
+</div>
 
-  <meal-list
-    [mealList]="meals"
-    (onMealSelect)="mealWasSelected($event)">
-  </meal-list>
+<meal-list
+  [mealList]="meals"
+  (onMealSelect)="mealWasSelected($event)">
+</meal-list>
 </div>
