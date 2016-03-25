@@ -18,15 +18,15 @@
 
 <div class="row">
   <div class="col-md-4">
-    <input placeholder="Name" class="input-md" #newName>
+    <input placeholder="Name" class="input-md" required #newName>
   </div>
 
   <div class="col-md-4">
-    <input placeholder="Description" class="input-md" #newDescription>
+    <input placeholder="Description" class="input-md" required #newDescription>
   </div>
 
   <div class="col-md-4">
-    <input placeholder="Calories" class="input-md" #newCalories>
+    <input type="number" placeholder="Calories" class="input-md" required #newCalories>
   </div>
 
 </div>
@@ -35,7 +35,7 @@
 
   <div class="row">
     <div class="col-md-3">
-      <button class="btn-lg" (click)="addMeal(newName, newDescription, newCalories)">Add</button>
+      <button class="btn btn-lg btn-danger" (click)="addMeal(newName, newDescription, newCalories)">Add</button>
     </div>
 
     <div class="col-md-3">
