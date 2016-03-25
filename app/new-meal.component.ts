@@ -9,7 +9,6 @@ import {Meal} from './meal.model';
 
 export class NewMealComponent {
   public onSubmitNewMeal: EventEmitter<any>;
-
     constructor(){
       this.onSubmitNewMeal = new EventEmitter();
     }
@@ -18,7 +17,7 @@ export class NewMealComponent {
     userCalories: HTMLInputElement){
       var mealArray: Array<any> = [userName.value, userDescription.value, userCalories.value];
 
-      this.onSubmitNewMeal.emit(mealArray);
+        this.onSubmitNewMeal.emit(mealArray);
 
         userName.value="";
         userDescription.value="";

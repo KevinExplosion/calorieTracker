@@ -1,7 +1,11 @@
+body {
+  background-color: #3498db;
+}
+
 h1 {
-  color: blue;
+  color: fff;
 }
 
 .selected {
-  color: #22bdf0
+  color: #bdc3c7;
 }
