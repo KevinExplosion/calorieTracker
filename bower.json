@@ -1,0 +1,21 @@
+{
+  "name": "calorie-tracker",
+  "description": "Track your meals and calories with this handy Angular2 app!",
+  "main": "",
+  "authors": [
+    "Kevin Mattison"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

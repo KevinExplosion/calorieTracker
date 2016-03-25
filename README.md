@@ -15,10 +15,16 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <https://github.com/KevinExplosion/calorieTracker.git>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
+* git clone <https://github.com/KevinExplosion/calorieTracker.git>
+* npm install
+* bower install
+* install globals if needed (gulp, bower, sass, typescript, typescript packages.)
+  * npm install gulp -g
+  * npm install bower -g
+  * gem install sass
+  * npm install typescript -g
+  * apm install atom-typescript
+* $ bower install bootstrap --save
 
 ## Running / Development
 
