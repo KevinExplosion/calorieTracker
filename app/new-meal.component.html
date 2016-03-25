@@ -1,0 +1,49 @@
+
+<div class="meal-form form-group">
+  <div class="row">
+
+    <div class="col-md-3">
+      <h3>Add a new Meal</h3>
+    </div>
+
+    <div class="col-md-3">
+    </div>
+
+    <div class="col-md-3">
+    </div>
+
+    <div class="col-md-3">
+    </div>
+
+  </div>
+
+<div class="row">
+  <div class="col-md-4">
+    <input placeholder="Name" class="input-md" #newName>
+  </div>
+
+  <div class="col-md-4">
+    <input placeholder="Description" class="input-md" #newDescription>
+  </div>
+
+  <div class="col-md-4">
+    <input placeholder="Calories" class="input-md" #newCalories>
+  </div>
+
+</div>
+
+<br>
+
+  <div class="row">
+    <div class="col-md-3">
+      <button class="btn-lg" (click)="addMeal(newName, newDescription, newCalories)">Add</button>
+    </div>
+
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+</div>
