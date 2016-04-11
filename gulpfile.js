@@ -125,6 +125,16 @@ gulp.task('build', ['ts'], function(){
   gulp.start('sassBuild');
 });
 
+////////////////////// GH-PAGES DEPLOYMENT TASK //////////////////////
+
+var gulp = require('gulp');
+var ghPages = require('gulp-gh-pages');
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
+
 ////////////////////// SETUP NOTES //////////////////////
 
 /*
